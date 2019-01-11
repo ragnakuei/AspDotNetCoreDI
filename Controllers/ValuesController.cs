@@ -14,10 +14,8 @@ namespace AspDotNetCoreDi.Controllers
     {
         private readonly IValueService _service;
 
-        public ValuesController()
+        public ValuesController(IValueService service)
         {
-            IValueRepository repository = new ValueRepository(); 
-            IValueService service = new ValueService(repository);
             _service = service;
         }
 
